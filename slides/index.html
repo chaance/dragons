@@ -1,18 +1,21 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thar Be Dragons: Rebuilding Native UIs on the Web</title>
+  </head>
 
-<script type="text/javascript">
+  <body bgcolor="#1f1f1f" onload="detectBrowser()">
+    <script type="text/javascript">
+      function detectBrowser() {
+        var slashIndex = window.location.href.lastIndexOf('/');
+        var cropped = window.location.href.slice(0, slashIndex + 1);
 
-function detectBrowser()
-{
-    var slashIndex = window.location.href.lastIndexOf("/");
-    var cropped = window.location.href.slice(0,slashIndex+1);
-
-    window.location.replace(cropped + "assets/player/KeynoteDHTMLPlayer.html");
-}
-
-</script>
-
-<body bgcolor="black" onload="detectBrowser()">
-</body>
-
+        window.location.replace(
+          cropped + 'assets/player/KeynoteDHTMLPlayer.html'
+        );
+      }
+    </script>
+  </body>
 </html>
